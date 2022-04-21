@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informes</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <script src="../js/bootstrap.min.js"></script>
+    
+</head>
+<body class="bg-light">
+    <header class="text-center">
+        <img src="../img/imagenencabezado.png" class="img-fluid">
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <li class="nav-item text-white">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logocul.png" alt="" width="50" height="auto">
+                </a>
+            </li>
+            <a class="navbar-brand bi-trash" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="../html/acesorias.html">Acesorías</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="../html/equipo.html">Equipo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="../html/funciona.html">¿Cómo funciona?</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-dark" href="../html/solicitudes.html">Solicitudes</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Informes</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-dark" href="../html/contactenos.html">Contáctenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../html/administrador.html">Administrador</a>
+                </li>
+                
+            </ul>
+              <a class="nav-link text-dark mb-2" href="../html/login.html"><b>Iniciar sesión</b></a>
+  
+            <div class="nav-link text-info mb-2" id="lbluser"></div>
+            
+            <script src="../js/validacion.js"></script>    
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <h1 class="text-primary">Informe <a href="#"> <img src="../img/informes.png" class="img-fluid " width="80" height="auto" ></a></h1>
+        <hr>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <form onsubmit="event.preventDefault();enviarFormulario();" autocomplete="off">
+                        <label for="nEstudiante">Nombre del Estudiante</label><label class="d-none text-danger ms-1" id="validarNombre">(Debes ingresar un nombre)</label>
+                        <input type="text" class="form-control" name="nEstudiante" id="nEstudiante">
+                    
+                        <label for="fechaSesion">Fecha de la sesión</label>
+                        <input type="date" class="form-control" name="fechaSesion" id="fechaSesion">
+                    
+                        <label for="horaSesion">Hora</label>
+                        <input type="time" class="form-control" name="horaSesion" id="horaSesion">
+                    
+                        <label for="cObserva">Observaciones</label>
+                        <textarea class="form-control" name="cObserva" id="cObserva" cols="30" rows="10"></textarea>
+                    <br>
+                    <div>
+                        <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+            <div class="table-responsive col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <table class="table  table-bordered text-center" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>N. Estudiante</th>
+                            <th>Fecha de Sesión</th>
+                            <th>Hora</th>
+                            <th>Observaciones</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+            <script src="../js/informe.js"></script>
+                  
+    </div>
+        
+    <div class="container-fluid bg-dark">
+                <div class="row">
+                    <div class=" text-white text-center col-xl-4 col-lg-4 col-md-6 col-sm-5">
+                        <br>
+                        <h5>Contacto</h5>
+                        Calle 58 # 55 - 24A  Barranquilla - Colombia
+                        <h5>Celular</h5>(+57) 314 7644802
+                    </div>
+                    <div class="text-center col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <br>
+                        <h4 class="text-white">Siguenos</h4>
+                        <a class="mt-5 navbar-brand text-white" href="https://es-la.facebook.com/culbarranquilla/">
+                            <img src="../img/logoface.png" alt="" width="40" height="auto" class="d-inline-block align-text-top"><b> Facebook</b>
+                        </a>
+                        <a class="navbar-brand text-white" href="https://www.instagram.com/bienestarcul/?hl=es">
+                            <img src="../img/logoinst.png" alt="" width="40" height="auto" class="d-inline-block align-text-top"><b> Instagram</b>
+                        </a>
+                        <a class="navbar-brand text-white" href="https://twitter.com/culbarranquilla?lang=es">
+                            <img src="../img/logotwitter.png" alt="" width="45" height="auto" class="d-inline-block align-text-top"><b> Twitter</b>
+                        </a>
+                        <a class="navbar-brand text-white" href="https://www.youtube.com/channel/UCR9VIje9rFPKu6fzZGbgNwQ">
+                            <img src="../img/iconyt.png" alt="" width="45" height="auto" class="d-inline-block align-text-top"><b> Youtube</b>
+                        </a>
+                    </div>
+                    <div class=" text-center text-white col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                        <br>
+                        <h5>Pagina Oficial</h5>
+                        <a class="navbar-brand text-white" href="https://ul.edu.co/"><img src="../img/logocul.png" alt="" width="35" height="auto" class="d-inline-block align-text-top"><b> ul.edu.co</b></a>
+                        <h5>Correo</h5>
+                        gjcorderop@ul.edu.co
+                        </div>
+                    </div>
+                    <div class="py-2 my-1 text-center position-relative mx-2">
+                        
+                        <div class="position-absolute w-100 top-50 start-50 translate-middle" style="z-index: 2">
+                            <span class="d-inline-block bg-white px-2 text-muted"></span>
+                        </div>
+                        <div class="position-absolute w-100 top-50 start-0 border-muted border-top"></div>
+                        
+                    </div>
+                    <div class="container-fluid text-center mb-3 bg-dark">
+                        <p class="text-center text-white text-muted"><em>VIGILADA MINEDUCACIÓN <br>
+                            Personería Jurídica: Resolución 8103 del 19 de diciembre 2006</em> </p>
+                    <span class="mx-auto d-inline-block bg-dark px-2 text-muted">© 2022 CORPORACIÓN UNIVERSITARIA LATINOAMERICANA - CUL</span>
+                    </div>
+        </div>
+</body>
+</html>
